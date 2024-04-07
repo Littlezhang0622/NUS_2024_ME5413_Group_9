@@ -1,6 +1,7 @@
 # ME5413_Final_Project
 
-NUS ME5413 Autonomous Mobile Robotics Final Project
+NUS ME5413 Autonomous Mobile Robotics Final Project By Group 9 
+Date:2024.4.7
 > Authors: Zhang Yuanbo ; Cao Ruoxi ; Li Yuze ; Wang Xiangyu ; Yin Jiaju ; Li Qi
 
 ![Ubuntu 20.04](https://img.shields.io/badge/OS-Ubuntu_20.04-informational?style=flat&logo=ubuntu&logoColor=white&color=2bbc8a)
