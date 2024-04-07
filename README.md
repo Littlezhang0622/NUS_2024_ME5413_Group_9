@@ -15,7 +15,7 @@ NUS ME5413 Autonomous Mobile Robotics Final Project
 ## Dependencies
 
 * System Requirements:
-  * Ubuntu 20.04 (18.04 not yet tested)
+  * Ubuntu 20.04
   * ROS Noetic (Melodic not yet tested)
   * C++11 and above
   * CMake: 3.0.2 and above
