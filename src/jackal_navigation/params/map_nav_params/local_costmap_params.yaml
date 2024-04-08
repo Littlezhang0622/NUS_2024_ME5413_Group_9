@@ -3,8 +3,8 @@ local_costmap:
    robot_base_frame: base_link
    update_frequency: 5.0
    publish_frequency: 5.0
-   width: 2.0
-   height: 2.0
+   width: 4.0
+   height: 4.0
    resolution: 0.05
    static_map: false
    rolling_window: true
@@ -14,4 +14,3 @@ local_costmap:
       - {name: obstacle_layer, type: "costmap_2d::ObstacleLayer"}
       - {name: costmap_prohibition_layer, type: "costmap_prohibition_layer_namespace::CostmapProhibitionLayer"}
       - {name: inflater_layer, type: "costmap_2d::InflationLayer"}
-##    - {name: virtual_wall, type: "virtual_wall::VirtuallWall"}
