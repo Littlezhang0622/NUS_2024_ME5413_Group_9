@@ -285,7 +285,7 @@
 
     <xacro:pointgrey_flea3 frame="${prefix}_camera" name="${name}"
       camera_x="0.0754" camera_y="0.029" camera_z="0.029"
-      camera_mass="0.085" hfov="1.0471975512" fps="60" width="640" height="512"/>
+      camera_mass="0.05" hfov="1.0471975512" fps="60" width="640" height="512"/>
 
     <!-- Mount Enabled -->
     <xacro:if value="${tower}">
@@ -299,7 +299,7 @@
       </joint>
 
       <joint name="${prefix}_camera_bracket_joint" type="fixed">
-        <origin xyz="0.020 0 0.0245" rpy="0 0 0" />
+        <origin xyz="0.020 0 5" rpy="0 1.570795 0" />
         <parent link="${prefix}_camera_beam" />
         <child link="${prefix}_camera" />
       </joint>
