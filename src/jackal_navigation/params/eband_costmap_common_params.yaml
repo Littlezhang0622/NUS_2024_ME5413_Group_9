@@ -29,7 +29,8 @@ obstacles_layer:
 inflater_layer:
  enabled: true
  cost_scaling_factor : 5.0
- inflation_radius: 0.5
+ inflation_radius: 0.45
+
 costmap_prohibition_layer:
  enabled: true
 
