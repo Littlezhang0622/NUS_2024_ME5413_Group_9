@@ -305,7 +305,7 @@
       </joint>
 
       <joint name="${prefix}_camera_bracket_joint" type="fixed">
-        <origin xyz="0.020 0 5" rpy="0 1.570795 0" />
+        <origin xyz="3.020 0 10" rpy="0 1.570795 0" />
         <parent link="${prefix}_camera_beam" />
         <child link="${prefix}_camera" />
       </joint>
