@@ -269,7 +269,13 @@
     - JACKAL_STEREO_FLEA3
     - JACKAL_BB2
   -->
-
+    <!-- d435 -->
+  <xacro:include filename="$(find jackal_description)/urdf/gazebo/d435.urdf.xacro" />
+  <xacro:if value="$(optenv intel_realsense 1)">
+    <xacro:sensor_d435 name="camera_front" topics_ns="camera_front" parent="base_link">
+      <origin xyz="0.2 0.0 0.184" rpy="0.0 0.0 0.0"/>
+    </xacro:sensor_d435>
+  </xacro:if>
   <!-- Common camera mounts and accessory URDFs. -->
   <xacro:include filename="$(find jackal_description)/urdf/accessories/camera_mount.urdf.xacro" />
   <xacro:include filename="$(find pointgrey_camera_description)/urdf/pointgrey_flea3.urdf.xacro" />
@@ -285,7 +291,7 @@
 
     <xacro:pointgrey_flea3 frame="${prefix}_camera" name="${name}"
       camera_x="0.0754" camera_y="0.029" camera_z="0.029"
-      camera_mass="0.085" hfov="1.0471975512" fps="60" width="640" height="512"/>
+      camera_mass="0.05" hfov="1.0471975512" fps="60" width="640" height="512"/>
 
     <!-- Mount Enabled -->
     <xacro:if value="${tower}">
@@ -299,7 +305,7 @@
       </joint>
 
       <joint name="${prefix}_camera_bracket_joint" type="fixed">
-        <origin xyz="0.020 0 0.0245" rpy="0 0 0" />
+        <origin xyz="0.020 0 5" rpy="0 1.570795 0" />
         <parent link="${prefix}_camera_beam" />
         <child link="${prefix}_camera" />
       </joint>
