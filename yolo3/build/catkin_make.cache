@@ -1,0 +1,2 @@
+darknet_ros/darknet_ros:darknet_ros/darknet_ros_msgs
+-DCATKIN_DEVEL_PREFIX=/home/yin/yolo3/devel -DCMAKE_INSTALL_PREFIX=/home/yin/yolo3/install -G Unix Makefiles
