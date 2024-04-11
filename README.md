@@ -12,7 +12,7 @@ Date:2024.4.7
 ![GitHub Repo forks](https://img.shields.io/github/forks/NUS-Advanced-Robotics-Centre/ME5413_Final_Project?color=FFE333)
 
 Config:D435 + mono + BEV + YOLOv3 + object_2d
-
+![Yolo training ](https://github.com/MasterLaoZhang/NUS_2024_ME5413_Group_9/blob/Final/src/gif%26picture/yolo_train.gif)
 ![Final Presentation ](https://github.com/MasterLaoZhang/NUS_2024_ME5413_Group_9/blob/Final/src/gif%26picture/test.gif)
 
 ## Dependencies
