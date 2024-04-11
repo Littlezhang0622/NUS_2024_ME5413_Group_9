@@ -5,5 +5,7 @@
         <param name="gui" value="true" type="bool"/>
         <param name="objects_path" value="$(find me5413_world)/media/template" type="str"/>
         <param name="settings_path" value="~/.ros/find_object_2d.ini" type="str"/>
+        <remap from="/objects" to="/objects_2d"/>
     </node>
+    <node name="trans_cam_node" pkg="me5413_world" type="trans_cam.py"  output="screen" />
 </launch>

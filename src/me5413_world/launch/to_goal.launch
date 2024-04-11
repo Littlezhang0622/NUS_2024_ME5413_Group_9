@@ -1,0 +1,3 @@
+<launch>
+    <node name="to_goal_node" pkg="me5413_world" type="to_goal.py"  output="screen" />
+</launch>

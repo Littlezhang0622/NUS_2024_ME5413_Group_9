@@ -69,12 +69,18 @@ namespace rviz_panel
         this->goal_name_msg_.data = "/box_1";
         this->pub_goal_.publish(this->goal_name_msg_);
     }
+//    void simplePanel::on_button_2_2_clicked()
+//    {
+//        ROS_INFO_STREAM("Setting Box 2 as the GOAL.");
+//        ui_->label_status->setText("Heading to Box 2");
+//        this->goal_name_msg_.data = "/box_2";
+//        this->pub_goal_.publish(this->goal_name_msg_);
+//    }
     void simplePanel::on_button_2_2_clicked()
     {
         ROS_INFO_STREAM("Setting Box 2 as the GOAL.");
         ui_->label_status->setText("Heading to Box 2");
-        this->goal_name_msg_.data = "/box_2";
-        this->pub_goal_.publish(this->goal_name_msg_);
+        system("roslaunch me5413_world to_goal.launch");
     }
     void simplePanel::on_button_2_3_clicked()
     {

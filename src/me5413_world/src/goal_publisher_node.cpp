@@ -139,11 +139,11 @@ void GoalPublisherNode::goalNameCallback(const std_msgs::String::ConstPtr& name)
   // Transform the robot pose to map frame
   tf2::doTransform(this->pose_world_robot_, this->pose_map_robot_, transform_map_world);
 
-  // Publish goal pose in map frame 
-  //if (this->goal_type_ != "box")
-  //{
-  this->pub_goal_.publish(P_map_goal);
-  //}
+   Publish goal pose in map frame
+  if (this->goal_type_ != "box")
+  {
+    this->pub_goal_.publish(P_map_goal);
+  }
 
   return;
 };
