@@ -41,6 +41,8 @@ Config:D435 + mono + BEV + YOLOv3 + object_2d
   * `jackal_navigation`
   * `velodyne_simulator`
   * `teleop_twist_keyboard`
+  * `find_object_2d`
+  * `find_object_3d`
 * And this [gazebo_model](https://github.com/osrf/gazebo_models) repositiory
 
 ## Installation
@@ -131,9 +133,22 @@ Once completed **Step 2** mapping and saved your map, quit the mapping process.
 Then, in the second terminal:
 
 ```bash
-# Load a map and launch AMCL localizer
+# Load a map and launch AMCL localizer and time-elastic-band navigation
 roslaunch me5413_world teb_navigation.launch
 ```
+
+
+### 4. Box Recognition
+
+To find the desired box (number 2), run the node to do template matching.
+
+```bash
+roslaunch me5413_world find_object_2d.launch
+```
+Then, press the rviz botton `Vehicle-2` to navigate the robot to the entrance of the package area.
+
+Once the robot has reached, press rviz botton `Box-2` to publish the estimated goal pose and navigate.
+
 
 
 ## Student Tasks
