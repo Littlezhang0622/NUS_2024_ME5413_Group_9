@@ -46,8 +46,8 @@ class TfExample:
 
     def send_goal(self, x, y, z):
         # create publisher
-        pub = rospy.Publisher('/move_base_simple/goal', PoseStamped, queue_size=10)
-
+        #pub = rospy.Publisher('/move_base_simple/goal', PoseStamped, queue_size=10)
+        pub = rospy.Publisher('/2d_goal', PoseStamped, queue_size=10)
         goal = PoseStamped()
         goal.header.stamp = rospy.Time.now()
         goal.header.frame_id = "map"
