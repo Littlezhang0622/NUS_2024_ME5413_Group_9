@@ -1,6 +1,6 @@
 Panels:
   - Class: rviz/Displays
-    Help Height: 78
+    Help Height: 104
     Name: Displays
     Property Tree Widget:
       Expanded:
@@ -11,7 +11,7 @@ Panels:
         - /Planning1
         - /Evaluation1
       Splitter Ratio: 0.6628242135047913
-    Tree Height: 303
+    Tree Height: 116
   - Class: rviz/Selection
     Name: Selection
   - Class: rviz/Tool Properties
@@ -279,8 +279,8 @@ Visualization Manager:
         - Alpha: 1
           Autocompute Intensity Bounds: true
           Autocompute Value Bounds:
-            Max Value: 12.586954116821289
-            Min Value: -1.1527326107025146
+            Max Value: 17.199953079223633
+            Min Value: 5.449489593505859
             Value: true
           Axis: X
           Channel Name: intensity
@@ -307,8 +307,8 @@ Visualization Manager:
         - Alpha: 1
           Autocompute Intensity Bounds: true
           Autocompute Value Bounds:
-            Max Value: 2.2205452919006348
-            Min Value: -0.07023334503173828
+            Max Value: 3.427845001220703
+            Min Value: -0.07045900821685791
             Value: true
           Axis: Z
           Channel Name: intensity
@@ -356,12 +356,14 @@ Visualization Manager:
                 Value: true
               Value: true
             Grid: true
+            Image: true
             InteractiveMarkers: true
             Localization:
               AMCL PoseArray: true
               AMCL PoseWithCovariance: true
               Map: true
               Value: true
+            MarkerArray: true
             Planning:
               Foot Print: true
               Full Path: true
@@ -713,14 +715,96 @@ Visualization Manager:
           Marker Topic: /gazebo/ground_truth/box_markers
           Name: BoxMarkerArray
           Namespaces:
-            {}
+            gazebo: true
           Queue Size: 100
           Value: true
       Enabled: true
       Name: Evaluation
     - Class: rviz/Image
+      Enabled: false
+      Image Topic: /camera_front/depth/image_raw
+      Max Value: 1
+      Median window: 5
+      Min Value: 0
+      Name: Image
+      Normalize Range: true
+      Queue Size: 2
+      Transport Hint: raw
+      Unreliable: false
+      Value: false
+    - Class: rviz/Image
       Enabled: true
       Image Topic: /camera_front/depth/image_raw
+      Max Value: 1
+      Median window: 5
+      Min Value: 0
+      Name: Image
+      Normalize Range: true
+      Queue Size: 2
+      Transport Hint: raw
+      Unreliable: false
+      Value: true
+    - Class: rviz/MarkerArray
+      Enabled: true
+      Marker Topic: /gazebo/ground_truth/box_markers
+      Name: MarkerArray
+      Namespaces:
+        gazebo: true
+      Queue Size: 100
+      Value: true
+    - Class: rviz/Camera
+      Enabled: false
+      Image Rendering: background and overlay
+      Image Topic: /front/image_raw
+      Name: Camera
+      Overlay Alpha: 0.5
+      Queue Size: 2
+      Transport Hint: raw
+      Unreliable: false
+      Value: false
+      Visibility:
+        "": true
+        Evaluation:
+          Absolute Error:
+            ADE (m): true
+            AHE (deg): true
+            Value: true
+          BoxMarkerArray: true
+          Relative Error:
+            RDE (m): true
+            RHE (deg): true
+            Value: true
+          Value: true
+        Grid: true
+        Image: true
+        InteractiveMarkers: true
+        Localization:
+          AMCL PoseArray: true
+          AMCL PoseWithCovariance: true
+          Map: true
+          Value: true
+        MarkerArray: true
+        Planning:
+          Foot Print: true
+          Full Path: true
+          Global CostMap: true
+          Goal Pose: true
+          Local CostMap: true
+          Local Path: true
+          Value: true
+        RobotModel: true
+        Sensing:
+          Camera: true
+          Image: true
+          Imu: true
+          LaserScan: true
+          PointCloud2: true
+          Value: true
+        Value: true
+      Zoom Factor: 1
+    - Class: rviz/Image
+      Enabled: true
+      Image Topic: /camera_front/color/image_raw
       Max Value: 1
       Median window: 5
       Min Value: 0
@@ -758,7 +842,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/ThirdPersonFollower
-      Distance: 13.746652603149414
+      Distance: 10.904985427856445
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
@@ -766,17 +850,17 @@ Visualization Manager:
         Value: false
       Field of View: 0.7853981852531433
       Focal Point:
-        X: 0
-        Y: 0
-        Z: 0
+        X: 0.15184640884399414
+        Y: -0.10561847686767578
+        Z: 6.67572021484375e-06
       Focal Shape Fixed Size: false
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 1.4953981637954712
+      Pitch: 1.2347962856292725
       Target Frame: base_link
-      Yaw: 1.2803988456726074
+      Yaw: 3.4504172801971436
     Saved:
       - Class: rviz/ThirdPersonFollower
         Distance: 4
@@ -822,7 +906,7 @@ Window Geometry:
   Hide Right Dock: false
   Image:
     collapsed: false
-  QMainWindow State: 000000ff00000000fd00000004000000000000015d0000037afc020000000bfb0000001200530065006c0065006300740069006f006e00000001e10000009b0000005c00fffffffb0000001e0054006f006f006c002000500072006f007000650072007400690065007302000001ed000001df00000185000000a3fb000000120056006900650077007300200054006f006f02000001df000002110000018500000122fb000000200054006f006f006c002000500072006f0070006500720074006900650073003203000002880000011d000002210000017afb000000100044006900730070006c006100790073010000003d000001ba000000c900fffffffb0000002000730065006c0065006300740069006f006e00200062007500660066006500720200000138000000aa0000023a00000294fb00000014005700690064006500530074006500720065006f02000000e6000000d2000003ee0000030bfb0000000c004b0069006e0065006300740200000186000001060000030c00000261fb0000000a0049006d00610067006501000001fd000000eb0000001600fffffffb0000000c00430061006d00650072006100000002d5000000c70000001600fffffffb0000000a0049006d00610067006501000002ee000000c90000001600ffffff000000010000014f0000037afc0200000005fb0000001e0054006f006f006c002000500072006f00700065007200740069006500730100000041000000780000000000000000fb0000000a00560069006500770073010000003d0000028f000000a400fffffffb0000001600730069006d0070006c006500500061006e0065006c01000002d2000000e5000000de000001a6fb0000000c00540065006c0065006f00700000000287000001150000000000000000fb0000001200530065006c0065006300740069006f006e010000025a000000b200000000000000000000000200000490000000a9fc0100000001fb0000000a00560069006500770073030000004e00000080000002e100000197000000030000078000000039fc0100000002fb0000000800540069006d0065010000000000000780000003bc00fffffffb0000000800540069006d00650100000000000004500000000000000000000004c80000037a00000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
+  QMainWindow State: 000000ff00000000fd00000004000000000000019300000343fc020000000efb0000001200530065006c0065006300740069006f006e00000001e10000009b0000008600fffffffb0000001e0054006f006f006c002000500072006f007000650072007400690065007302000001ed000001df00000185000000a3fb000000120056006900650077007300200054006f006f02000001df000002110000018500000122fb000000200054006f006f006c002000500072006f0070006500720074006900650073003203000002880000011d000002210000017afb000000100044006900730070006c0061007900730100000056000001320000012600fffffffb0000002000730065006c0065006300740069006f006e00200062007500660066006500720200000138000000aa0000023a00000294fb00000014005700690064006500530074006500720065006f02000000e6000000d2000003ee0000030bfb0000000c004b0069006e0065006300740200000186000001060000030c00000261fb0000000a0049006d0061006700650100000191000000a30000001e00fffffffb0000000c00430061006d00650072006100000002d5000000c70000001e00fffffffb0000000a0049006d006100670065010000023d0000008b0000001e00fffffffb0000000a0049006d00610067006500000002d1000000c80000001e00fffffffb0000000c00430061006d00650072006100000002d1000000c80000001e00fffffffb0000000a0049006d00610067006501000002d1000000c80000001e00ffffff000000010000014f00000343fc0200000005fb0000001e0054006f006f006c002000500072006f00700065007200740069006500730100000041000000780000000000000000fb0000000a00560069006500770073010000005600000254000000ec00fffffffb0000001600730069006d0070006c006500500061006e0065006c01000002b3000000e6000000e6000001aefb0000000c00540065006c0065006f00700000000287000001150000000000000000fb0000001200530065006c0065006300740069006f006e010000025a000000b200000000000000000000000200000490000000a9fc0100000001fb0000000a00560069006500770073030000004e00000080000002e10000019700000003000007800000004bfc0100000002fb0000000800540069006d00650100000000000007800000054300fffffffb0000000800540069006d006501000000000000045000000000000000000000048c0000034300000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
   Selection:
     collapsed: false
   Time:
@@ -833,6 +917,6 @@ Window Geometry:
     collapsed: false
   Width: 1920
   X: 220
-  Y: 239
+  Y: 175
   simplePanel:
     collapsed: false
