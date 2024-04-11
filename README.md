@@ -11,7 +11,9 @@ Date:2024.4.7
 ![GitHub Repo stars](https://img.shields.io/github/stars/NUS-Advanced-Robotics-Centre/ME5413_Final_Project?color=FFE333)
 ![GitHub Repo forks](https://img.shields.io/github/forks/NUS-Advanced-Robotics-Centre/ME5413_Final_Project?color=FFE333)
 
-![cover_image](src/me5413_world/media/gazebo_world.png)
+Config:D435+BEV+YOLOv3
+
+Final Presentation: 
 
 ## Dependencies
 
