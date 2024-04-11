@@ -13,7 +13,7 @@ Date:2024.4.7
 
 Config:D435+BEV+YOLOv3
 
-![Final Presentation ][https://github.com/MasterLaoZhang/NUS_2024_ME5413_Group_9/blob/Final/src/gif%26picture/test.gif]
+* [Final Presentation ](https://github.com/MasterLaoZhang/NUS_2024_ME5413_Group_9/blob/Final/src/gif%26picture/test.gif)
 
 ## Dependencies
 
