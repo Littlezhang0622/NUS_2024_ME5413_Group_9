@@ -11,7 +11,9 @@ Date:2024.4.7
 ![GitHub Repo stars](https://img.shields.io/github/stars/NUS-Advanced-Robotics-Centre/ME5413_Final_Project?color=FFE333)
 ![GitHub Repo forks](https://img.shields.io/github/forks/NUS-Advanced-Robotics-Centre/ME5413_Final_Project?color=FFE333)
 
-![cover_image](src/me5413_world/media/gazebo_world.png)
+Config:D435 + mono + BEV + YOLOv3 + object_2d
+![Yolo training ](https://github.com/MasterLaoZhang/NUS_2024_ME5413_Group_9/blob/Final/src/gif%26picture/yolo_train.gif)
+![Final Presentation ](https://github.com/MasterLaoZhang/NUS_2024_ME5413_Group_9/blob/Final/src/gif%26picture/test.gif)
 
 ## Dependencies
 
@@ -104,26 +106,13 @@ This command will launch the gazebo with the project world
 roslaunch me5413_world world.launch
 ```
 
-### 1. Manual Control
-
-If you wish to explore the gazebo world a bit, we provide you a way to manually control the robot around:
-
-```bash
-# Only launch the robot keyboard teleop control
-roslaunch me5413_world manual.launch
-```
-
-**Note:** This robot keyboard teleop control is also included in all other launch files, so you don't need to launch this when you do mapping or navigation.
-
-![rviz_manual_image](src/me5413_world/media/rviz_manual.png)
-
-### 2. Mapping
+### 1. Mapping(hector_mapping) if you want other slam algorithms, just get the pcd map
 
 After launching **Step 0**, in the second terminal:
 
 ```bash
 # Launch GMapping
-roslaunch me5413_world mapping.launch
+roslaunch me5413_world mapping.launch 
 ```
 
 After finishing mapping, run the following command in the thrid terminal to save the map:
@@ -134,7 +123,6 @@ roscd me5413_world/maps/
 rosrun map_server map_saver -f my_map map:=/map
 ```
 
-![rviz_nmapping_image](src/me5413_world/media/rviz_mapping.png)
 
 ### 3. Navigation
 
@@ -144,10 +132,9 @@ Then, in the second terminal:
 
 ```bash
 # Load a map and launch AMCL localizer
-roslaunch me5413_world navigation.launch
+roslaunch me5413_world teb_navigation.launch
 ```
 
-![rviz_navigation_image](src/me5413_world/media/rviz_navigation.png)
 
 ## Student Tasks
 
