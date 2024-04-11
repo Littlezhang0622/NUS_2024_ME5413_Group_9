@@ -2,7 +2,7 @@
 
 NUS ME5413 Autonomous Mobile Robotics Final Project By Group 9 
 Date:2024.4.7
-> Authors: Zhang Yuanbo ; Cao Ruoxi ; Li Yuze ; Wang Xiangyu ; Yin Jiaju ; Li Qi
+> Authors: Zhang Yuanbo; Cao Ruoxi; Li Yuze; Wang Xiangyu; Yin Jiaju; Li Qi
 
 ![Ubuntu 20.04](https://img.shields.io/badge/OS-Ubuntu_20.04-informational?style=flat&logo=ubuntu&logoColor=white&color=2bbc8a)
 ![ROS Noetic](https://img.shields.io/badge/Tools-ROS_Noetic-informational?style=flat&logo=ROS&logoColor=white&color=2bbc8a)
@@ -11,9 +11,16 @@ Date:2024.4.7
 ![GitHub Repo stars](https://img.shields.io/github/stars/NUS-Advanced-Robotics-Centre/ME5413_Final_Project?color=FFE333)
 ![GitHub Repo forks](https://img.shields.io/github/forks/NUS-Advanced-Robotics-Centre/ME5413_Final_Project?color=FFE333)
 
-Config:D435 + mono + BEV + YOLOv3 + object_2d
+Config:
+
+Camera:Intel realsense D435 + mono
+
+In our first experiment, we trained handwritten digits based on YOLOv3
 ![Yolo training ](https://github.com/MasterLaoZhang/NUS_2024_ME5413_Group_9/blob/Final/src/gif%26picture/yolo_train.gif)
+
+Finally, we used find_object_2d (template matching) to obtain the pixel coordinates of the target object in the frame, and combined with depth information for navigation implementation
 ![Final Presentation ](https://github.com/MasterLaoZhang/NUS_2024_ME5413_Group_9/blob/Final/src/gif%26picture/test.gif)
+
 
 ## Dependencies
 
@@ -43,7 +50,7 @@ Config:D435 + mono + BEV + YOLOv3 + object_2d
   * `teleop_twist_keyboard`
   * `find_object_2d`
 * And this [gazebo_model](https://github.com/osrf/gazebo_models) repositiory
-
+  Other required libraries are located in the src directory
 ## Installation
 
 This repo is a ros workspace, containing three rospkgs:
@@ -125,9 +132,9 @@ rosrun map_server map_saver -f my_map map:=/map
 ```
 
 
-### 3. Navigation
+### 2. Navigation
 
-Once completed **Step 2** mapping and saved your map, quit the mapping process.
+Once completed **Step 1** mapping and saved your map, quit the mapping process.
 
 Then, in the second terminal:
 
@@ -142,7 +149,7 @@ roslaunch me5413_world eband_navigation.launch
 roslaunch me5413_world navigation.launch
 ```
 
-### 4. Box Recognition
+### 3. Box Recognition
 #### 2D Detection
 To find the desired box (number 2), run the node to do template matching.
 
