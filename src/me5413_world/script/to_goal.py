@@ -5,7 +5,6 @@ import rospy
 from geometry_msgs.msg import PoseStamped
 
 
-# 回调函数，用于接收目标坐标
 def goal_callback(msg):
     global goal_msg
     goal_msg = msg
@@ -14,7 +13,6 @@ def goal_callback(msg):
 def publish_goal():
     rospy.init_node('to_goal_node', anonymous=True)
 
-    # 订阅目标坐标
     rospy.Subscriber('/2d_goal', PoseStamped, goal_callback)
 
     goal_publisher = rospy.Publisher('/move_base_simple/goal', PoseStamped, queue_size=10)
